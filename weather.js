@@ -16,9 +16,10 @@ var getlocation=function()
 						response.on('end',function(){
 										var parsedtext=JSON.parse(text);
 console.log('temp: '+parsedtext['data']['current_condition'][0]['temp_C']);										
-										});						
+									getlocation();	});						
 						}).end();
 						});
 	          
 	};
+
 getlocation();
